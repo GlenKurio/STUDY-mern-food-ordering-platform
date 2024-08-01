@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import MobileNav from "./mobile-nav";
+import MainNav from "./ui/main-nav";
 
 export default function Header() {
   return (
@@ -10,6 +12,12 @@ export default function Header() {
         >
           MernEats.com
         </Link>
+        <div className="md:hidden">
+          <MobileNav />
+        </div>
+        <div className="hidden md:block">
+          <MainNav />
+        </div>
       </div>
     </div>
   );
